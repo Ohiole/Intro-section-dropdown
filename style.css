@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+}
+
+header{
+    width: inherit;
+    padding: 1rem 2rem;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.leftSide img{
+    width: 100%;
+    margin-top: 0.5rem;
+}
+.btns .activateThis{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2em;
+}
+
+.btns ul a{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.btns ul a:hover{
+    color: hsl(0, 0%, 8%);
+    transition: color .3s ease-in-out;
+}
+
+.btns ul img{
+    cursor: pointer;
+}
+
+ul.insideList{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: hsl(0, 0%, 98%);
+    gap: 0.75em;
+    color: hsl(0, 0%, 41%);
+    position: absolute;
+    margin-top: 0.5rem;
+    z-index: 100;
+    left: 150px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 1px 15px hsl(0, 0%, 78%);
+}
+
+ul.insideList li{
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+ul.insideListComp{
+    display: none;
+    list-style-type: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: hsl(0, 0%, 98%);
+    gap: 0.75em;
+    color: hsl(0, 0%, 41%);
+    position: absolute;
+    margin-top: 0.5rem;
+    z-index: 100;
+    left: 300px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 1px 15px hsl(0, 0%, 78%);
+    transition: all .25s ease-in-out;
+}
+
+ul.insideListComp li{
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+ul.insideList li:hover, ul.insideListComp li:hover{
+    color: hsl(0, 0%, 8%);
+} 
+
+ul.insideListComp.showList, ul.insideList.showList{
+    display: flex;
+}
+
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btns a{
+    color: hsl(0, 0%, 41%);
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.btns a:hover{
+    color: hsl(0, 0%, 8%);
+    transition: color .3s ease-in-out;
+}
+
+.btns button{
+    color: hsl(0, 0%, 41%);
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 15px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 500;
+    width: 100px;
+    height: 40px;
+}
+
+.btns button:hover{
+    color: hsl(0, 0%, 8%);
+    border: 2px solid hsl(0, 0%, 8%);
+    transition: all .3s ease-in-out;
+}
+
+.menubar{
+    display: none;
+}
+
+main{
+    width: 100%;
+    padding: 2rem 10rem;
+    display: flex;
+}
+
+.textSide{
+    padding-top: 5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.textSide h1{
+    font-size: 4.5rem;
+    width: 100%;
+}
+
+.textSide p{
+    color: hsl(0, 0%, 41%);
+    font-size: 0.875rem;
+    width: 60%;
+    font-weight: 500;
+}
+
+.textSide button{
+    width: 140px;
+    height: 45px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.textSide button:hover{
+    color: hsl(0, 0%, 8%);
+    background-color: transparent;
+    border: 1px solid hsl(0, 0%, 8%);
+    transition: all .3s ease-in-out;
+}
+
+.textSide ul{
+    list-style-type: none;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.textSide ul li{
+    margin-right: 20px;
+}
+
+.imageSide img{
+    width: 85%;
+    margin-left: 3rem;
+}
+
+.mobileImage{
+    display: none;
+}
+
+@media screen and (max-width: 1239px) {
+    .textSide{
+        padding-top: 2rem;
+    }
+    .imageSide img{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1130px) {
+    main{
+        flex-direction: column-reverse;
+        padding: 2rem 5rem;
+    }
+    .textSide{
+        gap: 20px;
+        padding-top: 2rem;
+    }
+    .imageSide img{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .imageSide img{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 850px) {
+    body.clickedMenu{
+        overflow-y: hidden;
+    }
+    header{
+        justify-content: space-between;
+    }
+    .btns::after{
+        content: "";
+        position: fixed;
+        width: 40%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+    .btns{
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: absolute;
+        gap: 1rem;
+        top: 0;
+        right: 0;
+        background-color: hsl(0, 0%, 98%) !important;
+        height: 110%;
+        width: 60%;
+        padding: 4rem 1rem;
+        transition: all .3s ease-in-out;
+    }
+    .btns.showBtns{
+        display: flex;
+    }
+    .btns .activateThis{
+        flex-direction: column;
+        gap: 0.45rem;
+    }
+    .btns .buttons{
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   .btns button{
+        width: 100%;
+    }
+    ul.insideList{
+        position: unset;
+        z-index: 100;
+        padding: 0.5rem;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    ul.insideListComp{
+        position: unset;
+        z-index: 100;
+        padding: 0.5rem;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .menubar{
+        display: inline-block;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .textSide h1{
+        font-size: 2.75rem;
+        width: 100%;
+    }
+    .textSide h1 br{
+        display: none;
+    }
+    .imageSide img{
+        width: 80%;
+    }
+    main{
+        margin-top: 2rem;
+    }
+}
+@media screen and (max-width: 640px) {
+    main{
+        padding: 0;
+    }
+    .desktopImage{
+        display: none;
+    }
+    .mobileImage{
+        display: block;
+    }
+    .imageSide img{
+        width: 100%;
+        margin-left: 0;
+    }
+    .textSide{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .textSide h1{
+        font-size: 2rem;
+        width: 100%;
+    }
+    .textSide p{
+       width: 100%;
+    }
+    .textSide ul li{
+        margin-right: 0;
+        align-self: center;
+        margin-right: 1rem;
+    }
+}
+@media screen and (max-width: 590px) {
+    .textSide ul img{
+        width: 100%;
+    }   
+}
