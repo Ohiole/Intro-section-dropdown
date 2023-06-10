@@ -26,6 +26,8 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
+![Screenshot 2023-06-10 at 14-55-45 Frontend Mentor Intro section with dropdown navigation](https://github.com/Ohiole/Intro-section-dropdown/assets/67792211/b5d7447d-a43c-457f-afea-f061bd4ff1e8)
+
 
 ### Links
 
